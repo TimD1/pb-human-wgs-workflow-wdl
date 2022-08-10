@@ -6,7 +6,7 @@ struct IndexedData {
   File indexfile
 }
 
-struct LastIndexedData{
+struct LastIndexedData {
   String name
   File last_reference_bck
   File last_reference_des
