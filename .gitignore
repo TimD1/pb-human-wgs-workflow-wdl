@@ -11,3 +11,4 @@
 /.vs/pbRUGD-workflow/v16/.suo
 /.vs/VSWorkspaceState.json
 /.vs/pb-human-wgs-workflow-wdl/v16
+*.ipynb_checkpoints

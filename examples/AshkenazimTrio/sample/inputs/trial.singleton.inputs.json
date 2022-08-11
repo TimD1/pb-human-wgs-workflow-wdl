@@ -6,34 +6,9 @@
   "sample_trial.affected_person_sample": [
     [
       {
-        "name": "m64011_181218_235052",
-        "datafile": "/datasetpbhumandemodata/dataset/AshkenazimTrio/sample/HG002_NA24385_son/m64011_181218_235052.hg38.bam",
-        "indexfile": "/datasetpbhumandemodata/dataset/AshkenazimTrio/sample/HG002_NA24385_son/m64011_181218_235052.hg38.bam.bai"
-      },
-      {
-        "name": "m64011_181227_224151",
-        "datafile": "/datasetpbhumandemodata/dataset/AshkenazimTrio/sample/HG002_NA24385_son/m64011_181227_224151.hg38.bam",
-        "indexfile": "/datasetpbhumandemodata/dataset/AshkenazimTrio/sample/HG002_NA24385_son/m64011_181227_224151.hg38.bam.bai"
-      },
-      {
-        "name": "m64014_181210_152538",
-        "datafile": "/datasetpbhumandemodata/dataset/AshkenazimTrio/sample/HG002_NA24385_son/m64014_181210_152538.hg38.bam",
-        "indexfile": "/datasetpbhumandemodata/dataset/AshkenazimTrio/sample/HG002_NA24385_son/m64014_181210_152538.hg38.bam.bai"
-      },
-      {
-        "name": "m64017_190116_171555",
-        "datafile": "/datasetpbhumandemodata/dataset/AshkenazimTrio/sample/HG002_NA24385_son/m64017_190116_171555.hg38.bam",
-        "indexfile": "/datasetpbhumandemodata/dataset/AshkenazimTrio/sample/HG002_NA24385_son/m64017_190116_171555.hg38.bam.bai"
-      },
-      {
-        "name": "m64018_190129_193747",
-        "datafile": "/datasetpbhumandemodata/dataset/AshkenazimTrio/sample/HG002_NA24385_son/m64018_190129_193747.hg38.bam",
-        "indexfile": "/datasetpbhumandemodata/dataset/AshkenazimTrio/sample/HG002_NA24385_son/m64018_190129_193747.hg38.bam.bai"
-      },
-      {
-        "name": "m64020_190123_225958",
-        "datafile": "/datasetpbhumandemodata/dataset/AshkenazimTrio/sample/HG002_NA24385_son/m64020_190123_225958.hg38.bam",
-        "indexfile": "/datasetpbhumandemodata/dataset/AshkenazimTrio/sample/HG002_NA24385_son/m64020_190123_225958.hg38.bam.bai"
+        "name": "HG002_GRCh38_phased_bam",
+        "datafile": "https://ftp-trace.ncbi.nlm.nih.gov/ReferenceSamples/giab/data/AshkenazimTrio/HG002_NA24385_son/PacBio_SequelII_CCS_11kb/HG002_GRCh38/HG002_GRCh38.haplotag.10x.bam",
+        "indexfile": "https://ftp-trace.ncbi.nlm.nih.gov/ReferenceSamples/giab/data/AshkenazimTrio/HG002_NA24385_son/PacBio_SequelII_CCS_11kb/HG002_GRCh38/HG002_GRCh38.haplotag.10x.bam.bai"
       }
     ]
   ],

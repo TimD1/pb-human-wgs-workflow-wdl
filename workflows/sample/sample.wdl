@@ -34,8 +34,8 @@ workflow sample {
     File tr_bed
     File chr_lengths
 
-    File ref_modimers
-    File movie_modimers
+#    File ref_modimers
+#    File movie_modimers
 
     String pb_conda_image
     String deepvariant_image
@@ -43,10 +43,10 @@ workflow sample {
 
     Boolean run_jellyfish
 
-    File tg_list
-    File tg_bed
-    File score_matrix
-    LastIndexedData last_reference
+#    File tg_list
+#    File tg_bed
+#    File score_matrix
+#    LastIndexedData last_reference
 
   }
 
@@ -120,17 +120,17 @@ workflow sample {
     }
   }
 
-  call tandem_genotypes.tandem_genotypes {
-    input:
-      sample_name = sample_name,
-      pb_conda_image = pb_conda_image,
-      tg_list = tg_list,
-      score_matrix = score_matrix,
-      tg_bed = tg_bed,
-      last_reference = last_reference,
-      haplotagged_bam = whatshap_round2.deepvariant_haplotagged.datafile,
-      haplotagged_bai = whatshap_round2.deepvariant_haplotagged.indexfile,
-  }
+#  call tandem_genotypes.tandem_genotypes {
+#    input:
+#      sample_name = sample_name,
+#      pb_conda_image = pb_conda_image,
+#      tg_list = tg_list,
+#      score_matrix = score_matrix,
+#      tg_bed = tg_bed,
+#      last_reference = last_reference,
+#      haplotagged_bam = whatshap_round2.deepvariant_haplotagged.datafile,
+#      haplotagged_bai = whatshap_round2.deepvariant_haplotagged.indexfile,
+#  }
 
   call hifiasm.hifiasm {
     input:
@@ -151,10 +151,10 @@ workflow sample {
     File? jellyfish_output = jellyfish.jellyfish_output
     File? log = jellyfish.log
 
-    File sample_tandem_genotypes = tandem_genotypes.sample_tandem_genotypes
-    File sample_tandem_genotypes_absolute = tandem_genotypes.sample_tandem_genotypes_absolute
-    File sample_tandem_genotypes_plot = tandem_genotypes.sample_tandem_genotypes_plot
-    File sample_tandem_genotypes_dropouts = tandem_genotypes.sample_tandem_genotypes_dropouts
+#    File sample_tandem_genotypes = tandem_genotypes.sample_tandem_genotypes
+#    File sample_tandem_genotypes_absolute = tandem_genotypes.sample_tandem_genotypes_absolute
+#    File sample_tandem_genotypes_plot = tandem_genotypes.sample_tandem_genotypes_plot
+#    File sample_tandem_genotypes_dropouts = tandem_genotypes.sample_tandem_genotypes_dropouts
 
   }
 
