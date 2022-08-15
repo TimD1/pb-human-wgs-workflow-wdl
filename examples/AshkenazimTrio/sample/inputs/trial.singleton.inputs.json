@@ -7,8 +7,8 @@
     [
       {
         "name": "HG002_GRCh38_phased_bam",
-        "datafile": "https://ftp-trace.ncbi.nlm.nih.gov/ReferenceSamples/giab/data/AshkenazimTrio/HG002_NA24385_son/PacBio_SequelII_CCS_11kb/HG002_GRCh38/HG002_GRCh38.haplotag.10x.bam",
-        "indexfile": "https://ftp-trace.ncbi.nlm.nih.gov/ReferenceSamples/giab/data/AshkenazimTrio/HG002_NA24385_son/PacBio_SequelII_CCS_11kb/HG002_GRCh38/HG002_GRCh38.haplotag.10x.bam.bai"
+        "datafile": "/coa36f22852a556e0/inputs/HG002_GRCh38.chr1.bam",
+        "indexfile": "/coa36f22852a556e0/inputs/HG002_GRCh38.chr1.bam.bai"
       }
     ]
   ],
