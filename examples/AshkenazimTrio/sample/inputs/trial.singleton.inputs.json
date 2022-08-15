@@ -6,9 +6,9 @@
   "sample_trial.affected_person_sample": [
     [
       {
-        "name": "HG002_GRCh38_phased_bam",
-        "datafile": "/coa36f22852a556e0/inputs/HG002_GRCh38.chr1.bam",
-        "indexfile": "/coa36f22852a556e0/inputs/HG002_GRCh38.chr1.bam.bai"
+        "name": "HG002_GRCh38_chr22_bam",
+        "datafile": "/coa36f22852a556e0/inputs/HG2chr22/HG002_GRCh38.chr22.bam",
+        "indexfile": "/coa36f22852a556e0/inputs/HG2chr22/HG002_GRCh38.chr22.bam.bai"
       }
     ]
   ],

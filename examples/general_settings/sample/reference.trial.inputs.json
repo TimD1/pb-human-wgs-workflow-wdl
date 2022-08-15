@@ -1,8 +1,8 @@
 {
-  "sample_trial.tr_bed": "https://raw.githubusercontent.com/PacificBiosciences/pbsv/master/annotations/human_GRCh38_no_alt_analysis_set.trf.bed",
+  "sample_trial.tr_bed": "/coa36f22852a556e0/inputs/HG2chr22/human_GRCh38_no_alt_analysis_set.trf.bed",
   "sample_trial.reference": {
     "name": "hg38",
-    "datafile": "https://ftp.ncbi.nlm.nih.gov/genomes/all/GCA/000/001/405/GCA_000001405.15_GRCh38/seqs_for_alignment_pipelines.ucsc_ids/GCA_000001405.15_GRCh38_no_alt_analysis_set.fna.gz",
-    "indexfile": "https://ftp.ncbi.nlm.nih.gov/genomes/all/GCA/000/001/405/GCA_000001405.15_GRCh38/seqs_for_alignment_pipelines.ucsc_ids/GCA_000001405.15_GRCh38_no_alt_analysis_set.fna.fai"
+    "datafile": "/coa36f22852a556e0/inputs/HG2chr22/GCA_000001405.15_GRCh38_no_alt_analysis_set.fna",
+    "indexfile": "/coa36f22852a556e0/inputs/HG2chr22/GCA_000001405.15_GRCh38_no_alt_analysis_set.fna.fai"
   }
 } 
