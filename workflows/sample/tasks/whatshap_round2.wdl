@@ -283,8 +283,12 @@ task merge_haplotagged_bams {
 
   command <<<
     echo requested disk_size =  ~{disk_size}
+    echo
+    source ~/.bashrc
+    conda activate samtools
+    echo "$(conda info)"
 
-  (samtools merge -b ~{sep=" -b " deepvariant_haplotagged_bams} -o ~{merged_deepvariant_haplotagged_bam_name}) > ~{log_name} 2>&1	
+  (samtools merge -@ 4 -b ~{sep=" -b " deepvariant_haplotagged_bams} -o ~{merged_deepvariant_haplotagged_bam_name}) > ~{log_name} 2>&1	
   >>>
   output {
     File merged_deepvariant_haplotagged_bam = "~{merged_deepvariant_haplotagged_bam_name}"
@@ -294,7 +298,7 @@ task merge_haplotagged_bams {
     docker: "~{pb_conda_image}"
     preemptible: true
     maxRetries: 3
-    memory: "14 GB"
+    memory: "64 GB"
     cpu: "~{threads}"
     disk: disk_size + " GB"
   }
