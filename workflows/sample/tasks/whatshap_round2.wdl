@@ -284,10 +284,7 @@ task merge_haplotagged_bams {
   command <<<
     echo requested disk_size =  ~{disk_size}
 
-    (samtools merge \
-	-b ~{sep=" -b " deepvariant_haplotagged_bams} \
-	-o ~{merged_deepvariant_haplotagged_bam_name}
-    ) > ~{log_name} 2>&1	
+  (samtools merge -b ~{sep=" -b " deepvariant_haplotagged_bams} -o ~{merged_deepvariant_haplotagged_bam_name}) > ~{log_name} 2>&1	
   >>>
   output {
     File merged_deepvariant_haplotagged_bam = "~{merged_deepvariant_haplotagged_bam_name}"
