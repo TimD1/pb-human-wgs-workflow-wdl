@@ -274,7 +274,7 @@ task merge_haplotagged_bams {
     String? reference_name
 
     String merged_deepvariant_haplotagged_bam_name = "~{sample_name}.~{reference_name}.deepvariant.haplotagged.bam"
-    String picard_image
+    String pb_conda_image
     Int threads = 8
   }
 
@@ -284,8 +284,9 @@ task merge_haplotagged_bams {
   command <<<
     echo requested disk_size =  ~{disk_size}
 
-    (
-      java -jar /usr/picard/picard.jar MergeSamFiles I=~{sep=" I=" deepvariant_haplotagged_bams} O=~{merged_deepvariant_haplotagged_bam_name} VALIDATION_STRINGENCY=LENIENT
+    (samtools merge \
+	-b ~{sep=" -b " deepvariant_haplotagged_bams} \
+	-o ~{merged_deepvariant_haplotagged_bam_name}
     ) > ~{log_name} 2>&1	
   >>>
   output {
@@ -293,7 +294,7 @@ task merge_haplotagged_bams {
     File log = "~{log_name}"
   }
   runtime {
-    docker: "~{picard_image}"
+    docker: "~{pb_conda_image}"
     preemptible: true
     maxRetries: 3
     memory: "14 GB"
@@ -312,7 +313,6 @@ workflow whatshap_round2 {
     File chr_lengths
     Array[String] regions
     String pb_conda_image
-    String picard_image
   }
 
     scatter (region in regions) {
@@ -406,7 +406,7 @@ workflow whatshap_round2 {
       reference_name = reference.name,
       deepvariant_haplotagged_bams = deepvariant_haplotagged_bam_data_and_index_files.datafiles,
       deepvariant_haplotagged_bais = deepvariant_haplotagged_bam_data_and_index_files.indexfiles,
-      picard_image = picard_image
+      pb_conda_image = pb_conda_image
   }
 
   call samtools_common.samtools_index_bam as merge_haplotagged_bams_indexing {
