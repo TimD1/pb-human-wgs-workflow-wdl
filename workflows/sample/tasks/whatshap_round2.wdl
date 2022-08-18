@@ -288,7 +288,7 @@ task merge_haplotagged_bams {
     conda activate samtools
     echo "$(conda info)"
 
-  (samtools merge -@ 4 -b ~{sep=" -b " deepvariant_haplotagged_bams} -o ~{merged_deepvariant_haplotagged_bam_name}) > ~{log_name} 2>&1	
+  (samtools merge ~{merged_deepvariant_haplotagged_bam_name} ~{sep=" " deepvariant_haplotagged_bams}) > ~{log_name} 2>&1	
   >>>
   output {
     File merged_deepvariant_haplotagged_bam = "~{merged_deepvariant_haplotagged_bam_name}"
